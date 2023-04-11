@@ -15,7 +15,6 @@ public class Person {
         {
             this.name="Error! Empty Input.";
         }
-        else
         this.name = name;
     }
 
@@ -28,7 +27,6 @@ public class Person {
         {
             this.email="Error! Empty Input.";
         }
-        else
         this.email = email;
     }
 

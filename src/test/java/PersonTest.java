@@ -10,7 +10,7 @@ public class PersonTest {
     }
 
     @Test
-    public void testSetAge() {
+    public void testSetAge_shouldSetInteger_givenIntegerAge() {
         person.setAge(32);
         Assertions.assertEquals(32, person.getAge());
         person.setAge(0);
@@ -20,7 +20,7 @@ public class PersonTest {
     }
 
     @Test
-    public void testGetName() {
+    public void testGetName_shouldReturnString_givenStringName() {
         person.setName("Anshika");
         Assertions.assertEquals("Anshika", person.getName());
         person.setName("");
@@ -28,7 +28,7 @@ public class PersonTest {
     }
 
     @Test
-    public void testGetEmail() {
+    public void testGetEmail_shouldReturnString_givenStringEmail() {
         person.setEmail("anshika.srivastava@knoldus.com");
         Assertions.assertEquals("anshika.srivastava@knoldus.com", person.getEmail());
         person.setEmail("");
@@ -36,7 +36,7 @@ public class PersonTest {
     }
 
     @Test
-    public void testGetAge() {
+    public void testGetAge_shouldReturnInteger_givenIntegerAge() {
         person.setAge(22);
         Assertions.assertEquals(22, person.getAge());
         person.setAge(0);
