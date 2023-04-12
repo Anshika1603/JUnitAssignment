@@ -3,16 +3,16 @@ import java.util.Scanner;
 class StringOperations {
 
     // Method to reverse the String
-    public String reverse(String inputStatement){
-        if(isEmpty(inputStatement)) {
+    public String reverse(String inputStr){
+        if(isEmpty(inputStr)) {
             return "Invalid Input";
         }
         else {
             String reversedStatement = "";
             char letterOfWord;
 
-            for (int index = 0; index < inputStatement.length(); index++) {
-                letterOfWord = inputStatement.charAt(index);
+            for (int index = 0; index < inputStr.length(); index++) {
+                letterOfWord = inputStr.charAt(index);
                 reversedStatement = letterOfWord + reversedStatement;
             }
             return reversedStatement;
@@ -20,21 +20,21 @@ class StringOperations {
     }
 
     // Method to check if the String is empty
-    public boolean isEmpty(String inputStatement){
-        if(inputStatement.equals("")) {
+    public boolean isEmpty(String inputStr){
+        if(inputStr.equals("")) {
             return true;
         }
         return false;
     }
 
     // Method to check if the String is Palindrome
-    public boolean isPalindrome(String inputStatement){
-        if(isEmpty(inputStatement)) {
+    public boolean isPalindrome(String inputStr){
+        if(isEmpty(inputStr)) {
             return false;
         }
         else {
-            String reversedStatement = reverse(inputStatement);
-            if (inputStatement.equals(reversedStatement)) {
+            String reversedStatement = reverse(inputStr);
+            if (inputStr.equals(reversedStatement)) {
                 return true;
             }
             return false;

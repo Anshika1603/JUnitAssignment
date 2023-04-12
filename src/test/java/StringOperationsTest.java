@@ -13,14 +13,22 @@ public class StringOperationsTest {
     @Test
     public void testReverse_shouldReturnString_givenString(){
         assertEquals("cba", stringOperations.reverse("abc"));
-        assertEquals("Invalid Input", stringOperations.reverse(""));
         assertEquals("racecar", stringOperations.reverse("racecar"));
     }
 
     @Test
-    public void testIsEmpty_shouldReturnBoolean_givenString(){
-        assertTrue(stringOperations.isEmpty(""));
+    public void testReverse_shouldReturnErrorText_givenEmptyString(){
+        assertEquals("Invalid Input", stringOperations.reverse(""));
+    }
+
+    @Test
+    public void testIsEmpty_shouldReturnFalse_givenString(){
         assertFalse(stringOperations.isEmpty("hello"));
+    }
+
+    @Test
+    public void testIsEmpty_shouldReturnTrue_givenEmptyString(){
+        assertTrue(stringOperations.isEmpty(""));
     }
 
     @Test
@@ -28,6 +36,10 @@ public class StringOperationsTest {
         assertTrue(stringOperations.isPalindrome("racecar"));
         assertTrue(stringOperations.isPalindrome("madam"));
         assertFalse(stringOperations.isPalindrome("hello"));
+    }
+
+    @Test
+    public void testIsPalindrome_shouldReturnFalse_givenEmptyString(){
         assertFalse(stringOperations.isPalindrome(""));
     }
 }
