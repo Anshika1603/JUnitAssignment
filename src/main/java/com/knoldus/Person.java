@@ -42,8 +42,9 @@ public class Person {
         else if (age<0) {
             this.age=age;
             System.out.println("Error: Invalid Age");
-        } else
-        this.age = age;
+        } else {
+            this.age = age;
+        }
     }
 
     public static void main(String[] args) {
